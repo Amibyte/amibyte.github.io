@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list"></ul>
+    <input type ="text" id="inp">
+    <button onclick="bk()">click to add</button>
+    <button onclick ="rem()">remove</button>
+    <p id="demo"></p>
+    <script>
+        function bk(){
+         var ul = document.getElementById("list");
+         var v = document.getElementById("inp");
+         var l = document.createElement("li");
+         l.setAttribute('id',inp.value);
+         l.appendChild(document.createTextNode(inp.value));
+         ul.appendChild(l);
+        }
+        function rem(){
+            var ul = document.getElementById("list");
+            var v = document.getElementById("inp");
+            var item = document.getElementById(inp.value);
+            ul.removeChild(item);
+        }
+
+    </script>
+</body>
+</html>
