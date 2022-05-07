@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #demo{
+            display: none;
+            border: 2px solid grey;
+            margin: 50px;
+        
+        }
+        body{
+            background-image: linear-gradient(pink,lightblue);
+            min-height: 570px;
+        }
+        textarea{
+            width: 500px;
+            height: 300px;
+            resize: none;
+        }
+    </style>
+</head>
+<body align="center">
+    <textarea></textarea>
+    <br>
+    <button onclick="myf()">SAVE</button>
+    <button onclick="myf1()">CLEAR</button>
+    <p id="demo"></p>
+    <script>
+        function myf(){
+            document.getElementById("demo").style.display = "block";
+            var e = document.querySelector("textarea").value;
+            document.getElementById("demo").innerHTML = e;
+        }
+
+        function myf1(){
+            document.getElementById("demo").style.display = "none";
+            document.querySelector("textarea").value ="";
+            document.getElementById("demo").innerHTML = "";
+        }
+    </script>
+</body>
+</html>
